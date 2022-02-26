@@ -1,9 +1,10 @@
 package com.mateusz.controller;
 
-import com.mateusz.view.EmailManger;
+import com.mateusz.EmailManger;
 import com.mateusz.view.ViewFactory;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TreeView;
 import javafx.scene.web.WebView;
@@ -24,7 +25,13 @@ public class MainWindowController extends BaseController {
     }
 
     @FXML
-    void optionsAction(ActionEvent event) {
+    void optionsAction() {
+        viewFactory.showOptionsWindow();
+    }
+
+    @FXML
+    void addAccountAction() {
+        viewFactory.showLoginWindow();
 
     }
 

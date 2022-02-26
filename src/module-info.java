@@ -3,6 +3,8 @@ module Emailclient {
     requires javafx.controls;
     requires javafx.graphics;
     requires javafx.web;
+    requires activation;
+    requires java.mail;
 
     opens com.mateusz;
     opens com.mateusz.view;

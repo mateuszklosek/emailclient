@@ -1,4 +1,4 @@
-package com.mateusz.view;
+package com.mateusz;
 
 public class EmailManger {
 }
