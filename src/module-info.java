@@ -9,4 +9,5 @@ module Emailclient {
     opens com.mateusz;
     opens com.mateusz.view;
     opens com.mateusz.controller;
+    opens com.mateusz.model;
 }

@@ -17,14 +17,19 @@ public class ViewFactory {
 
     private EmailManger emailManger;
     private ArrayList<Stage> activeStages;
+    private boolean mainViewInitialized = false;
 
     public ViewFactory(EmailManger emailManger) {
         this.emailManger = emailManger;
         activeStages = new ArrayList<Stage>();
     }
 
+    public boolean isMainViewInitialized(){
+        return mainViewInitialized;
+    }
+
     //View options handling:
-    private ColorTheme colorTheme = ColorTheme.LIGHT ;
+    private ColorTheme colorTheme = ColorTheme.DEFAULT ;
     private FontSize fontSize = FontSize.MEDIUM;
 
     public void setColorTheme(ColorTheme colorTheme) {
@@ -56,6 +61,7 @@ public class ViewFactory {
 
         BaseController controller = new MainWindowController(emailManger,this,"MainWindow.fxml");
         initializeStage(controller);
+        mainViewInitialized = true;
     }
 
     public void showOptionsWindow(){
