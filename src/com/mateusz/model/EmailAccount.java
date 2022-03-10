@@ -1,14 +1,30 @@
 package com.mateusz.model;
 
+import javax.mail.Session;
 import javax.mail.Store;
 import java.util.Properties;
 
 public class EmailAccount {
 
     private String address;
+
+    @Override
+    public String toString() {
+        return address;
+    }
+
     private String password;
     private Properties properties;
     private Store store;
+    private Session session;
+
+    public Session getSession() {
+        return session;
+    }
+
+    public void setSession(Session session) {
+        this.session = session;
+    }
 
     public String getAddress() {
         return address;

@@ -1,10 +1,7 @@
 package com.mateusz.view;
 
 import com.mateusz.EmailManger;
-import com.mateusz.controller.BaseController;
-import com.mateusz.controller.LoginWindowController;
-import com.mateusz.controller.MainWindowController;
-import com.mateusz.controller.OptionsWindowController;
+import com.mateusz.controller.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -102,4 +99,12 @@ public class ViewFactory {
             scene.getStylesheets().add(getClass().getResource(FontSize.getCssPath(fontSize)).toExternalForm());
         }
     }
+
+    public void showComposeMessageWindow(){
+        System.out.println("show compose message window ");
+
+        BaseController controller = new ComposeMessageController(emailManger,this,"ComposeMessageWindow.fxml");
+        initializeStage(controller);
+    }
+
 }
