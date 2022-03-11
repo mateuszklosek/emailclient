@@ -107,4 +107,11 @@ public class ViewFactory {
         initializeStage(controller);
     }
 
+    public void showEmailDetailsWindow(){
+        System.out.println("show email details window ");
+
+        BaseController controller = new EmailDetailController(emailManger,this,"EmailDetailsWindow.fxml");
+        initializeStage(controller);
+    }
+
 }
